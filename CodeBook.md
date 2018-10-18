@@ -3,21 +3,7 @@ Human Activity Recognition Using Smartphones Dataset
 Version 1.0
 ==================================================================
 
-Below sections we have described the steps to follow to tidy up the data set
-
-Download data
-
-Below is the code used to download the data for this analysis
-library(data.table)
-fileurl = 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
-if (!file.exists('./UCI HAR Dataset.zip')){
-  download.file(fileurl,'./UCI HAR Dataset.zip', mode = 'wb')
-  unzip("UCI HAR Dataset.zip", exdir = getwd())
-}
-
-
-
-Read and Convert Data
+Description of various variables:
 
 Data is read file by file and converted into a single data frame
 features <- read.csv('./UCI HAR Dataset/features.txt', header = FALSE, sep = ' ')
